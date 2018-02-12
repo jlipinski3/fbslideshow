@@ -105,7 +105,7 @@ class facebook_slideshow extends social_fetch
 		{
 			$this->album_id=$album_id;
 			$photos = array();
-			$return_data = $this->return_json($this->$album_id);
+			$return_data = $this->return_json($this->album_id);
 			
 			foreach($return_data as $new_photo)
 			{
@@ -161,7 +161,12 @@ if(isset($_GET["camera"]) && isset($cameras[$_GET["camera"]])){wansview_slidesho
 echo $output;
 
 ?>
+<div style='text-align: center; padding: 1em; padding-top: 2em; clear: both; color: #999999; font-size: .6em; text-transform: uppercase'>
+This project is on GitHub at <a href="https://github.com/jlipinski3/phpslideshow">github.com/jlipinski3/phpslideshow</a>.
+</div>
 <style>
+a {color: inherit}
+a:hover {text-decoration: none}
 .nav {}
 .nav ul {list-style: none; position: relative; margin: 0px 5px 0px 5px; width: calc(100% - 10px)}
 .nav ul li {float: left; display: block; right: 50%; width: calc(50% - 10px); border: 5px solid #ffffff; margin-top: 5px; margin-bottom: 5px}
