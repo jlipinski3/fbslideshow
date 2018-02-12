@@ -3,6 +3,8 @@ PHP pgwslideshow slideshow from Facebook gallery (using curl) or wansview securi
 
 -Facebook gallery takes in the album id. You must ensure you have client secret and all that good stuff already. The script will create a cache file of the generated json and save the file in the same directory with the albumid.json as the filename.
 
--Security camera view is set up to take the "?camera" url param as the subdirectory where the security camera jpgs are uploaded. The directory structure will be "/scriptdir/cameradir/photosandvideos/". Because the wansview security camera uses an "ARCYYYYMMDDHHMMSS.jpg", this has been coded for that. There are also .mp4s that are the same format but one second later ("ARCYYYYMMDDHHMM[SS+1].mp4"). This where the "View Video" link comes into play, after verifying the corresponding video file exists.
+-Security camera view is set up to take the "?camera" url param as the subdirectory where the security camera jpgs are uploaded. The directory structure will be "/scriptdir/cameradir/photosandvideos/". Because the wansview security camera uses an "ARCYYYYMMDDHHMMSS.jpg", this has been coded for that. There are also .mp4s that are the same format but one second later ("ARCYYYYMMDDHHMM[SS+1].mp4"). This is where the "View Video" link comes into play, after verifying the corresponding video file exists.
+
+-Note: if using this to display security camera footage, the photos and video will take up a lot of space, so be smart and run an automated job (cron or similar) to purge old ones as they accumulate.
 
 Also see here for wansview security camera web app: http://freshed.com/wickles
